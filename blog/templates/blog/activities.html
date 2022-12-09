@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% block content %}
+{% for i in l%}
+<article class="media content-section">
+    <div class="media-body">
+      <div class="article-metadata">
+        <a class="mr-2" href="#"><b>{{i.username}}</b></a>
+        <small class="text-muted">{{ i.date|date:"F d, Y" }}</small>
+      </div>
+      <p class="article-content">{{i.details}}</p>
+    </div>
+  </article>
+{% endfor %}
+{% endblock content %}  
